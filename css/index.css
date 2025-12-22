@@ -1,0 +1,109 @@
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../asset/main-bg.jpg);
+  background-size: cover;
+  position: relative;
+
+  img {
+    width: 700px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  div {
+    background-color: #00000099;
+    border: 2px double white;
+    font-size: 2rem;
+    padding: 2em;
+
+    button {
+      background-color: rgb(0, 132, 255);
+      color: white;
+      margin-top: 1em;
+      font-size: 2rem;
+      padding: 0.5em 1em;
+      border: none;
+      outline: 0;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgb(0, 96, 186);
+      }
+    }
+  }
+}
+
+main::after {
+  content: "";
+  background-color: #00000055;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.action,
+.letter-container {
+  position: relative;
+  z-index: 10;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white; /* 배경이 어두우므로 텍스트는 밝게 */
+  text-align: center;
+}
+
+section.letter-container {
+  display: none;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 30px;
+  gap: 1rem;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 70vw;
+  height: 80vh;
+  border-radius: 10px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+article {
+  /* display: none; */
+
+  background-color: white;
+  width: 300px;
+  height: auto;
+  padding: 1em;
+  border: 1px solid black;
+  min-height: 320px;
+  max-height: 500px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:nth-child(3n + 2) {
+    background-color: #ffffe0;
+  }
+  &:nth-child(3n + 4) {
+    background-color: #d8bfd8;
+  }
+  &:nth-child(2n + 3) {
+    background-color: #b0e0e6;
+  }
+}
