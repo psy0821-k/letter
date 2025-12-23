@@ -3,7 +3,7 @@ import { funModel } from "./funModel.js";
 const action = {
   act1: new funModel(
     "./asset/act2.png",
-    "안녕하세요! 선생님 좋은아침 입니다. 오늘 5번쨰 주차로 벌써 마지막 수업이네요"
+    "안녕하세요! 선생님 좋은아침 입니다. 오늘 5번째 주차로 벌써 마지막 수업이네요"
   ),
   act2: new funModel(
     "./asset/act1.png",
